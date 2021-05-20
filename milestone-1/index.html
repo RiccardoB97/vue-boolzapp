@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/1d47f7a9f5.js" crossorigin="anonymous"></script>
     <!-- Main CSS file -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Boolzapp</title>
@@ -16,8 +18,27 @@
         <div class="background"></div>
         <div class="screen_wrapper d_flex">
             <section class="users">
-                <div class="my_user">
-                    <img :src="myAvatar" alt="">
+                <nav class="my_user d_flex">
+                    <div class="user_image d_flex">
+                        <img :src="myAvatar" alt="">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="user_icons d_flex">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </nav>
+                <div class="notification d_flex">
+                    <i class="fas fa-bell-slash"></i>
+                    <div class="notification_link">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <div class="search_bar">
+                    <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                    <i class="fas fa-search"></i>
                 </div>
             </section>
             <section class="chat">
