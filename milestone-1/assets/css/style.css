@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    min-width: 1170px;
+}
+.screen_wrapper{
+    width: 80%;
+    height: 90%;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 0 auto;
+}
+
+.background{
+    background-color:#DBDBD2;
+    box-shadow: 0px -125px #009688;
+    margin-top: 125px;
+    height: calc(100vh - 125px);
+    position: relative;
+}
