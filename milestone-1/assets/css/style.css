@@ -153,6 +153,8 @@ Chat section
     background-image: url(../img/mine.jpg);
     height: calc(100% - 105px);
     width: 100%;
+    flex-direction: column;
+    padding: 40px;
 }
 .chat_user{
     height: 105px;
@@ -198,4 +200,21 @@ Chat section
     height: 60px;
     padding:10px;
     border-radius: 4px;
+}
+
+.message{
+    padding: 20px;
+    width: fit-content;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.message.sent{
+    background-color: #D5F9BA;
+    align-self: flex-end;
+}
+
+.message.received{
+    background-color: white;
+    align-self: flex-start;
 }

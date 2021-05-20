@@ -3,34 +3,35 @@ const app = new Vue({
     data: {
         activeContact: '',
         activeAvatar: '',
+        activeChat: {},
         myAvatar: "./assets/img/avatar_5.jpg",
         contacts: [
             {
                 name: 'Fabio',
                 avatar: './assets/img/avatar_4.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Oh Zio giochiamo a Warzone?',
-                        status: 'sent'
+                        status: 'received'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        text: 'Ricordati di dargli da mangiare',
+                        text: 'Magari piu tardi, ora non posso!',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        text: 'Vorrei ma devo imparare VueJS',
-                        status: 'received'
+                        text: 'Vorrei ma devo imparare VueJS.',
+                        status: 'sent'
                     }
                 ],
             },
             {
                 name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -53,7 +54,7 @@ const app = new Vue({
             {
                 name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -75,7 +76,7 @@ const app = new Vue({
             {
                 name: 'Jordan',
                 avatar: './assets/img/avatar_7.jpg',
-                visible: true,
+                visible: false,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -115,9 +116,7 @@ const app = new Vue({
 
     },
     methods: {
-        showChat(user) {
-            return this.activeContact = user.name, this.activeAvatar = user.avatar
-        }
+
     }
 })
 

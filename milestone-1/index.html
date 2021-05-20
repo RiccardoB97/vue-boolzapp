@@ -41,7 +41,7 @@
                     <i class="fas fa-search"></i>
                 </div>
                 <div class="contact_list">
-                    <div v-for="(user, index) in contacts" class="contact d_flex" @click="showChat(user)">
+                    <div v-for="(user, index) in contacts" class="contact d_flex">
                         <img :src="user.avatar" alt="">
                         {{user.name}}
                     </div>
@@ -50,21 +50,14 @@
             <section class="chat">
                 <div class="chat_user d_flex">
                     <!-- Default chat shown -->
-                    <div class="avatar_and_access d_flex " v-if="activeContact === ''">
-                        <img src="./assets/img/avatar_8.jpg" alt="">
-                        <div class="last_access">
-                            <span>Alessandro</span>
+                    <div class="avatar_and_access d_flex " v-for="contact in contacts" v-if='contact.visible === true'>
+                        <img :src="contact.avatar" alt="">
+                        <div class=" last_access">
+                            <span>{{contact.name}}</span>
                             <p class="access_time">Ultimo accesso oggi alle</p>
                         </div>
                     </div>
                     <!-- Chat shown when clicking on a contact -->
-                    <div class="avatar_and_access d_flex " v-else>
-                        <img :src="activeAvatar" alt="">
-                        <div class="last_access">
-                            <span>{{activeContact}}</span>
-                            <p class="access_time">Ultimo accesso oggi alle</p>
-                        </div>
-                    </div>
                     <div class="chat_icons">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>
@@ -72,7 +65,10 @@
                     </div>
                 </div>
                 <!-- Bottom part of chat -->
-                <div class="chat_background">
+                <div class="chat_background d_flex" v-for="contact in contacts" v-if='contact.visible === true'>
+                    <div class="message" :class='message.status' v-for='message in contact.messages'>
+                        {{message.text}}
+                    </div>
                     <div class="chat_input d_flex">
                         <i class="far fa-smile"></i>
                         <input type="text" placeholder="Scrivi un messaggio">
