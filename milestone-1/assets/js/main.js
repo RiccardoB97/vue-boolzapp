@@ -1,16 +1,18 @@
 const app = new Vue({
     el: '#app',
     data: {
-        myAvatar: "./assets/img/avatar_io.jpg",
+        activeContact: '',
+        activeAvatar: '',
+        myAvatar: "./assets/img/avatar_5.jpg",
         contacts: [
             {
-                name: 'Riccardo',
-                avatar: './assets/img/avatar_1.jpg',
+                name: 'Fabio',
+                avatar: './assets/img/avatar_4.jpg',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        text: 'Hai portato a spasso il cane?',
+                        text: 'Oh Zio giochiamo a Warzone?',
                         status: 'sent'
                     },
                     {
@@ -20,7 +22,7 @@ const app = new Vue({
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        text: 'Tutto fatto!',
+                        text: 'Vorrei ma devo imparare VueJS',
                         status: 'received'
                     }
                 ],
@@ -71,8 +73,8 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Sarah',
-                avatar: './assets/img/avatar_6.jpg',
+                name: 'Jordan',
+                avatar: './assets/img/avatar_7.jpg',
                 visible: true,
                 messages: [
                     {
@@ -113,7 +115,9 @@ const app = new Vue({
 
     },
     methods: {
-
+        showChat(user) {
+            return this.activeContact = user.name, this.activeAvatar = user.avatar
+        }
     }
 })
 

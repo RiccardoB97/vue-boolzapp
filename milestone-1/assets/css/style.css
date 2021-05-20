@@ -20,6 +20,10 @@ img{
     display: flex;
 }
 
+i:hover{
+    opacity: 50%;
+    cursor: pointer;
+}
 
 
 #app{
@@ -129,6 +133,10 @@ User section
     border-bottom: 1px solid #EAEAEA;
     align-items: center;
 }
+.contact:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
 .contact img{
     margin-right: 15px;
 }
@@ -143,8 +151,7 @@ Chat section
 }
 .chat_background{
     background-image: url(../img/mine.jpg);
-    height: 100%;
-    overflow: auto;
+    height: calc(100% - 105px);
     width: 100%;
 }
 .chat_user{
@@ -169,7 +176,6 @@ Chat section
     margin: 0 10px;
     color: grey;
     font-size: 18px;
-    opacity: 75%;
 }
 
 .chat_input{
