@@ -1,6 +1,7 @@
 const app = new Vue({
-    el = '#app',
+    el: '#app',
     data: {
+        myAvatar: "./assets/img/avatar_io.jpg",
         contacts: [
             {
                 name: 'Michele',
