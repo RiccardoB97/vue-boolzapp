@@ -68,6 +68,7 @@
                 <div class="chat_background d_flex" v-for="contact in contacts" v-if='contact.visible === true'>
                     <div class="message" :class='message.status' v-for='message in contact.messages'>
                         {{message.text}}
+                        <small class="message_date">{{message.date}}</small>
                     </div>
                     <div class="chat_input d_flex">
                         <i class="far fa-smile"></i>
