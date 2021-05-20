@@ -4,7 +4,7 @@ const app = new Vue({
         myAvatar: "./assets/img/avatar_io.jpg",
         contacts: [
             {
-                name: 'Michele',
+                name: 'Riccardo',
                 avatar: './assets/img/avatar_1.jpg',
                 visible: true,
                 messages: [
@@ -26,7 +26,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Fabio',
+                name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
                 visible: true,
                 messages: [
@@ -49,7 +49,7 @@ const app = new Vue({
             },
 
             {
-                name: 'Samuele',
+                name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
                 visible: true,
                 messages: [
@@ -71,7 +71,7 @@ const app = new Vue({
                 ],
             },
             {
-                name: 'Luisa',
+                name: 'Sarah',
                 avatar: './assets/img/avatar_6.jpg',
                 visible: true,
                 messages: [
@@ -84,6 +84,28 @@ const app = new Vue({
                         date: '10/01/2020 15:50:00',
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Alessandro',
+                avatar: './assets/img/avatar_8.jpg',
+                visible: true,
+                messages: [
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Tutto a posto zi?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'Bene grazie! Stasera ci vediamo?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:35:00',
+                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        status: 'sent'
                     }
                 ],
             },

@@ -139,11 +139,57 @@ Chat section
 .chat{
     width:70%;
     height: 100%;
-    background-color: blue;
+    position: relative;
+}
+.chat_background{
+    background-image: url(../img/mine.jpg);
+    height: 100%;
+    overflow: auto;
+    width: 100%;
 }
 .chat_user{
     height: 105px;
-    background-color: yellow;
+    align-items: center;
+    background-color:#EAEAEA;
+    border-left: 1px solid rgb(188, 187, 187);
+    padding: 15px;
+    line-height: 24px;
+    justify-content: space-between;
+}
+.avatar_and_access{
+    align-items: center;
+}
+.chat_user .last_access{
+    margin-left: 15px;
+}
+.chat_user .access_time{
+    color:grey;
+}
+.chat_icons i{
+    margin: 0 10px;
+    color: grey;
+    font-size: 18px;
+    opacity: 75%;
 }
 
-
+.chat_input{
+    height:80px;
+    background-color:#F3EEEA;
+    align-items: center;
+    justify-content:space-evenly;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.chat_input i{
+    font-size:18px;
+    color: gray;
+}
+.chat_input input{
+    width: 80%;
+    border: none;
+    height: 60px;
+    padding:10px;
+    border-radius: 4px;
+}
