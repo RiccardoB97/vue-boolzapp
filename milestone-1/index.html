@@ -40,6 +40,12 @@
                     <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
                     <i class="fas fa-search"></i>
                 </div>
+                <div class="contact_list">
+                    <div v-for="user in contacts" class="contact d_flex">
+                        <img :src="user.avatar" alt="">
+                        {{user.name}}
+                    </div>
+                </div>
             </section>
             <section class="chat">
                 <div class="chat_user">

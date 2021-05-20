@@ -10,6 +10,11 @@ body{
     font-size: 14px;
 }
 
+img{
+    height: 80px;
+    border-radius: 50%;
+}
+
 /* Utilities */
 .d_flex{
     display: flex;
@@ -39,11 +44,13 @@ body{
     position: relative;
 }
 
-/* User section */
+/***** 
+User section 
+******/
 .users{
     width: 30%;
     height: 100%;
-    background-color: red;
+    background-color: #EAEAEA;
 }
 
 .my_user{
@@ -53,10 +60,7 @@ body{
     padding: 15px;
     background-color: #EAEAEA;
 }
-.my_user img{
-    height: 80px;
-    border-radius: 50%;
-}
+
 .my_user .user_image{
     align-items: center;
 }
@@ -68,6 +72,7 @@ body{
     opacity: 75%;
 }
 
+/* Notifications */
 .users .notification{
     background-color: #8EDAFC;
     height: 120px;
@@ -94,6 +99,7 @@ body{
     position: relative;
 }
 
+/* Search bar */
 .search_bar input{
     height: 40px;
     width:100%;
@@ -108,10 +114,28 @@ body{
     transform: translate(0, -50%);
     font-size: 1rem;
     color: grey;
-    opacity: 75%A;
+    opacity: 75%;
 }
 
-/* Chat section */
+/* Contact list  */
+.contact_list{
+    overflow: auto;
+    height: calc(100% - 275px)
+}
+
+.contact{
+    background-color:white;
+    padding:10px 20px;
+    border-bottom: 1px solid #EAEAEA;
+    align-items: center;
+}
+.contact img{
+    margin-right: 15px;
+}
+
+/*****
+Chat section
+******/
 .chat{
     width:70%;
     height: 100%;
