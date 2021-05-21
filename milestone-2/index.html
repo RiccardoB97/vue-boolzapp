@@ -52,11 +52,11 @@
             <section class="chat">
                 <div class="chat_user d_flex">
                     <!-- Default chat shown -->
-                    <div class="avatar_and_access d_flex " v-for="contact in contacts" v-if='contact.visible === true'>
-                        <img :src="contact.avatar" alt="">
+                    <div class="avatar_and_access d_flex ">
+                        <img :src="contacts[activeContact].avatar" alt="">
                         <div class=" last_access">
-                            <span></span>
-                            <p class="access_time">Ultimo accesso oggi alle</p>
+                            <span>{{contacts[activeContact].name}}</span>
+                            <p class="access_time">Ultimo accesso oggi alle {{contacts[activeContact].lastAccess}}</p>
                         </div>
                     </div>
                     <!-- Chat shown when clicking on a contact -->
@@ -66,12 +66,13 @@
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
-                <!-- Bottom part of chat -->
-                <div class="chat_background d_flex" v-for="contact in contacts" v-if='contact.visible === true'>
-                    <div class="message" :class='message.status' v-for='message in contact.messages'>
-
+                <!-- Main chat section -->
+                <div class="chat_background d_flex">
+                    <div class="message" v-for="message in contacts[activeContact].messages" :class="message.status">
+                        {{message.text}}
                         <small class="message_date"></small>
                     </div>
+                    <!-- Chat input -->
                     <div class="chat_input d_flex">
                         <i class="far fa-smile"></i>
                         <input type="text" placeholder="Scrivi un messaggio">

@@ -1,13 +1,14 @@
 const app = new Vue({
     el: '#app',
     data: {
-
+        activeContact: 0,
         myAvatar: "./assets/img/avatar_5.jpg",
         contacts: [
             {
                 name: 'Fabio',
                 avatar: './assets/img/avatar_4.jpg',
                 visible: false,
+                lastAccess: '15:30',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -30,6 +31,7 @@ const app = new Vue({
                 name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
                 visible: false,
+                lastAccess: '15:30',
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -53,6 +55,7 @@ const app = new Vue({
                 name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
                 visible: false,
+                lastAccess: '15:30',
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -75,6 +78,7 @@ const app = new Vue({
                 name: 'Jordan',
                 avatar: './assets/img/avatar_7.jpg',
                 visible: false,
+                lastAccess: '15:30',
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
