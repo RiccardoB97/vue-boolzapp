@@ -12,17 +12,17 @@ const app = new Vue({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        text: 'Oh Zio giochiamo a Warzone?',
+                        text: 'Yo bro you wanna play some Warzone?',
                         status: 'received'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        text: 'Magari piu tardi, ora non posso!',
+                        text: "I might jump on later, really busy now",
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
-                        text: 'Vorrei ma devo imparare VueJS.',
+                        text: "I'd want to but gotta learn VueJS. 🙃",
                         status: 'sent'
                     }
                 ],
@@ -35,17 +35,17 @@ const app = new Vue({
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
-                        text: 'Ciao come stai?',
+                        text: 'You on bro?',
                         status: 'sent'
                     },
                     {
                         date: '20/03/2020 16:30:55',
-                        text: 'Bene grazie! Stasera ci vediamo?',
+                        text: 'No mate, Milly and Fraser are here',
                         status: 'received'
                     },
                     {
                         date: '20/03/2020 16:35:00',
-                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        text: 'Zero problem brother',
                         status: 'sent'
                     }
                 ],
@@ -59,17 +59,17 @@ const app = new Vue({
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
-                        text: 'La Marianna va in campagna',
+                        text: 'Wanna go with uncle bruno for a pint down the shore? 🎱🍻',
                         status: 'received'
                     },
                     {
                         date: '28/03/2020 10:20:10',
-                        text: 'Sicuro di non aver sbagliato chat?',
+                        text: 'Only if we get kebab for dinner!',
                         status: 'sent'
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        text: 'Ah scusa!',
+                        text: 'Deal',
                         status: 'received'
                     }
                 ],
@@ -82,12 +82,12 @@ const app = new Vue({
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
-                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        text: 'What you having for dinner?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
-                        text: 'Si, ma preferirei andare al cinema',
+                        text: 'Guess what?! KFC 😂',
                         status: 'received'
                     }
                 ],
@@ -100,18 +100,18 @@ const app = new Vue({
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
-                        text: 'Tutto a posto zi?',
-                        status: 'sent'
-                    },
-                    {
-                        date: '20/03/2020 16:30:55',
-                        text: 'Bene grazie! Stasera ci vediamo?',
+                        text: 'Wanna come for dinner tonight?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:35:00',
-                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        date: '20/03/2020 16:30:55',
+                        text: 'What are you cooking? I ll bring the wine! 🍷',
                         status: 'sent'
+                    },
+                    {
+                        date: '20/03/2020 16:35:00',
+                        text: 'Gonna make cavatelli ai frutti di maree',
+                        status: 'received'
                     }
                 ],
             },
