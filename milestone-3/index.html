@@ -75,7 +75,8 @@
                     <!-- Chat input -->
                     <div class="chat_input d_flex">
                         <i class="far fa-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio"
+                            @keyup.enter="addMessage(contacts[activeContact])" v-model="message">
                         <i class="fas fa-microphone"></i>
                     </div>
                 </div>

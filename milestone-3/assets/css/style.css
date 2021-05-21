@@ -151,10 +151,11 @@ Chat section
 }
 .chat_background{
     background-image: url(../img/mine.jpg);
-    height: calc(100% - 105px);
+    height: calc(100% - 185px);
     width: 100%;
     flex-direction: column;
     padding: 40px;
+    overflow: auto;
 }
 .chat_user{
     height: 105px;
@@ -202,6 +203,7 @@ Chat section
     border-radius: 4px;
 }
 
+/* Message style */
 .message{
     padding: 20px;
     width: fit-content;

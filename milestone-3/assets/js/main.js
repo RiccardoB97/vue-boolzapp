@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
+        message: '',
         activeContact: 0,
         myAvatar: "./assets/img/avatar_5.jpg",
         contacts: [
@@ -69,7 +70,7 @@ const app = new Vue({
                     },
                     {
                         date: '28/03/2020 16:15:22',
-                        text: 'Deal',
+                        text: 'We have a deal',
                         status: 'received'
                     }
                 ],
@@ -119,8 +120,22 @@ const app = new Vue({
 
     },
     methods: {
+        // Shows the chat with the active contact
         showChat(index) {
             return this.activeContact = index
+        },
+        // Adds a new message
+        addMessage(activeContact) {
+            activeContact.messages.push({
+                date: '6:30:00',
+                text: this.message,
+                status: "sent"
+            })
+            return this.message = '', setTimeout(activeContact.messages.push({
+                date: '6:30:01',
+                text: "ok",
+                status: "received"
+            }), 1000)
         }
     }
 }
