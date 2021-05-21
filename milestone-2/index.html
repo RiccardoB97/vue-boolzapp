@@ -43,7 +43,7 @@
                 </div>
                 <!-- Contact list -->
                 <div class="contact_list">
-                    <div v-for="(user, index) in contacts" class="contact d_flex" @click="showChat(user, index)">
+                    <div v-for="(user, index) in contacts" class="contact d_flex" @click="showChat(index)">
                         <img :src="user.avatar" alt="">
                         {{user.name}}
                     </div>

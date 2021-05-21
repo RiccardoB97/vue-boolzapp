@@ -95,6 +95,7 @@ const app = new Vue({
             {
                 name: 'Alessandro',
                 avatar: './assets/img/avatar_8.jpg',
+                lastAccess: '15:30',
                 visible: true,
                 messages: [
                     {
@@ -118,8 +119,8 @@ const app = new Vue({
 
     },
     methods: {
-        showChat(user) {
-
+        showChat(index) {
+            return this.activeContact = index
         }
     }
 }
