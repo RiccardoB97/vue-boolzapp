@@ -140,6 +140,11 @@ User section
 .contact img{
     margin-right: 15px;
 }
+.contact_info .last_access{
+    font-size: 0.7rem;
+    color: gray;
+    margin-top:5px;
+}
 
 /*****
 Chat section

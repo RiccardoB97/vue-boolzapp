@@ -33,7 +33,7 @@ const app = new Vue({
                 name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
                 visible: false,
-                lastAccess: dayjs('20/03/2020 16:30:55').format('MM/DD/YY HH:mm'),
+                lastAccess: dayjs('03/20/2020 16:35:00').format('DD/MM/YY HH:mm'),
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -57,7 +57,7 @@ const app = new Vue({
                 name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
                 visible: false,
-                lastAccess: dayjs('28/03/2020 16:15:22').format('MM/DD/YY HH:mm'),
+                lastAccess: dayjs('03/28/2020 16:15:22').format('DD/MM/YY HH:mm'),
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -97,7 +97,7 @@ const app = new Vue({
             {
                 name: 'Alessandro',
                 avatar: './assets/img/avatar_8.jpg',
-                lastAccess: dayjs('20/03/2020 16:35:00').format('MM/DD/YY HH:mm'),
+                lastAccess: dayjs('03/20/2020 16:35:00').format('DD/MM/YY HH:mm'),
                 visible: true,
                 messages: [
                     {
@@ -127,16 +127,18 @@ const app = new Vue({
         },
         // Adds a new message
         addMessage(activeContact) {
-            activeContact.messages.push({
-                date: dayjs().format('HH:mm'),
-                text: this.message,
-                status: "sent"
-            })
-            return this.message = '', setTimeout(activeContact.messages.push({
-                date: dayjs().format('HH:mm'),
-                text: "ok",
-                status: "received"
-            }), 1000), activeContact.lastAccess = dayjs().format('HH:mm')
+            if (this.message !== '') {
+                activeContact.messages.push({
+                    date: dayjs().format('HH:mm'),
+                    text: this.message,
+                    status: "sent"
+                })
+                return this.message = '', setTimeout(activeContact.messages.push({
+                    date: dayjs().format('HH:mm'),
+                    text: "ok",
+                    status: "received"
+                }), 1000), activeContact.lastAccess = dayjs().format('HH:mm')
+            } A
         },
         deleteMessage(message) {
             return message.text = ''

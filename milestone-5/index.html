@@ -47,7 +47,14 @@
                     <div v-for="(contact, index) in contacts" class="contact d_flex" @click="showChat(index)"
                         v-if='contact.name.toLowerCase().includes(search)'>
                         <img :src="contact.avatar" alt="">
-                        {{contact.name}}
+                        <div class="contact_info">
+                            <p>
+                                {{contact.name}}
+                            </p>
+                            <p class='last_access'>
+                                {{contact.lastAccess}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
