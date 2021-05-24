@@ -10,20 +10,20 @@ const app = new Vue({
                 name: 'Fabio',
                 avatar: './assets/img/avatar_4.jpg',
                 visible: false,
-                lastAccess: '15:30',
+                lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: dayjs('10/01/2020 15:30:55').format('HH:mm'),
                         text: 'Yo bro you wanna play some Warzone?',
                         status: 'received'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: dayjs('10/01/2020 15:50:00').format('HH:mm'),
                         text: "I might jump on later, really busy now",
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 16:15:22',
+                        date: dayjs('10/01/2020 16:15:22').format('HH:mm'),
                         text: "I'd want to but gotta learn VueJS. 🙃",
                         status: 'sent'
                     }
@@ -33,20 +33,20 @@ const app = new Vue({
                 name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
                 visible: false,
-                lastAccess: '15:30',
+                lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: '20/03/2020 16:30:00',
+                        date: dayjs('20/03/2020 16:30:00').format('HH:mm'),
                         text: 'You on bro?',
                         status: 'sent'
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        date: dayjs('20/03/2020 16:30:55').format('HH:mm'),
                         text: 'No mate, Milly and Fraser are here',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:35:00',
+                        date: dayjs('20/03/2020 16:35:00').format('HH:mm'),
                         text: 'Zero problem brother',
                         status: 'sent'
                     }
@@ -57,20 +57,20 @@ const app = new Vue({
                 name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
                 visible: false,
-                lastAccess: '15:30',
+                lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: '28/03/2020 10:10:40',
+                        date: dayjs('28/03/2020 10:10:40').format('HH:mm'),
                         text: 'Wanna go with uncle bruno for a pint down the shore? 🎱🍻',
                         status: 'received'
                     },
                     {
-                        date: '28/03/2020 10:20:10',
+                        date: dayjs('28/03/2020 10:20:10').format('HH:mm'),
                         text: 'Only if we get kebab for dinner!',
                         status: 'sent'
                     },
                     {
-                        date: '28/03/2020 16:15:22',
+                        date: dayjs('28/03/2020 16:15:22').format('HH:mm'),
                         text: 'We have a deal',
                         status: 'received'
                     }
@@ -80,15 +80,15 @@ const app = new Vue({
                 name: 'Jordan',
                 avatar: './assets/img/avatar_7.jpg',
                 visible: false,
-                lastAccess: '15:30',
+                lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: '10/01/2020 15:30:55',
+                        date: dayjs('10/01/2020 15:30:55').format('HH:mm'),
                         text: 'What you having for dinner?',
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:50:00',
+                        date: dayjs('10/01/2020 15:50:00').format('HH:mm'),
                         text: 'Guess what?! KFC 😂',
                         status: 'received'
                     }
@@ -97,21 +97,21 @@ const app = new Vue({
             {
                 name: 'Alessandro',
                 avatar: './assets/img/avatar_8.jpg',
-                lastAccess: '15:30',
+                lastAccess: dayjs().format('hh:mm'),
                 visible: true,
                 messages: [
                     {
-                        date: '20/03/2020 16:30:00',
+                        date: dayjs('20/03/2020 16:30:00').format('HH:mm'),
                         text: 'Wanna come for dinner tonight?',
                         status: 'received'
                     },
                     {
-                        date: '20/03/2020 16:30:55',
+                        date: dayjs('20/03/2020 16:30:55').format('HH:mm'),
                         text: 'What are you cooking? I ll bring the wine! 🍷',
                         status: 'sent'
                     },
                     {
-                        date: '20/03/2020 16:35:00',
+                        date: dayjs('20/03/2020 16:35:00').format('HH:mm'),
                         text: 'Gonna make cavatelli ai frutti di maree',
                         status: 'received'
                     }
@@ -128,12 +128,12 @@ const app = new Vue({
         // Adds a new message
         addMessage(activeContact) {
             activeContact.messages.push({
-                date: '6:30:00',
+                date: dayjs().format('HH:mm'),
                 text: this.message,
                 status: "sent"
             })
             return this.message = '', setTimeout(activeContact.messages.push({
-                date: '6:30:01',
+                date: dayjs().format('HH:mm'),
                 text: "ok",
                 status: "received"
             }), 1000)
