@@ -13,17 +13,17 @@ const app = new Vue({
                 lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: dayjs('10/01/2020 15:30:55').format('HH:mm'),
+                        date: '10/01/2020 15:30:55',
                         text: 'Yo bro you wanna play some Warzone?',
                         status: 'received'
                     },
                     {
-                        date: dayjs('10/01/2020 15:50:00').format('HH:mm'),
+                        date: '10/01/2020 15:50:00',
                         text: "I might jump on later, really busy now",
                         status: 'sent'
                     },
                     {
-                        date: dayjs('10/01/2020 16:15:22').format('HH:mm'),
+                        date: '10/01/2020 16:15:22',
                         text: "I'd want to but gotta learn VueJS. 🙃",
                         status: 'sent'
                     }
@@ -36,17 +36,17 @@ const app = new Vue({
                 lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: dayjs('20/03/2020 16:30:00').format('HH:mm'),
+                        date: '20/03/2020 16:30:00',
                         text: 'You on bro?',
                         status: 'sent'
                     },
                     {
-                        date: dayjs('20/03/2020 16:30:55').format('HH:mm'),
+                        date: '20/03/2020 16:30:55',
                         text: 'No mate, Milly and Fraser are here',
                         status: 'received'
                     },
                     {
-                        date: dayjs('20/03/2020 16:35:00').format('HH:mm'),
+                        date: '20/03/2020 16:35:00',
                         text: 'Zero problem brother',
                         status: 'sent'
                     }
@@ -60,17 +60,17 @@ const app = new Vue({
                 lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: dayjs('28/03/2020 10:10:40').format('HH:mm'),
+                        date: '28/03/2020 10:10:40',
                         text: 'Wanna go with uncle bruno for a pint down the shore? 🎱🍻',
                         status: 'received'
                     },
                     {
-                        date: dayjs('28/03/2020 10:20:10').format('HH:mm'),
+                        date: '28/03/2020 10:20:10',
                         text: 'Only if we get kebab for dinner!',
                         status: 'sent'
                     },
                     {
-                        date: dayjs('28/03/2020 16:15:22').format('HH:mm'),
+                        date: '28/03/2020 16:15:22',
                         text: 'We have a deal',
                         status: 'received'
                     }
@@ -83,12 +83,12 @@ const app = new Vue({
                 lastAccess: dayjs().format('hh:mm'),
                 messages: [
                     {
-                        date: dayjs('10/01/2020 15:30:55').format('HH:mm'),
+                        date: '10/01/2020 15:30:55',
                         text: 'What you having for dinner?',
                         status: 'sent'
                     },
                     {
-                        date: dayjs('10/01/2020 15:50:00').format('HH:mm'),
+                        date: '10/01/2020 15:50:00',
                         text: 'Guess what?! KFC 😂',
                         status: 'received'
                     }
@@ -101,17 +101,17 @@ const app = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: dayjs('20/03/2020 16:30:00').format('HH:mm'),
+                        date: '20/03/2020 16:30:00',
                         text: 'Wanna come for dinner tonight?',
                         status: 'received'
                     },
                     {
-                        date: dayjs('20/03/2020 16:30:55').format('HH:mm'),
+                        date: '20/03/2020 16:30:55',
                         text: 'What are you cooking? I ll bring the wine! 🍷',
                         status: 'sent'
                     },
                     {
-                        date: dayjs('20/03/2020 16:35:00').format('HH:mm'),
+                        date: '20/03/2020 16:35:00',
                         text: 'Gonna make cavatelli ai frutti di maree',
                         status: 'received'
                     }
