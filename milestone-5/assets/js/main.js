@@ -1,0 +1,148 @@
+const app = new Vue({
+    el: '#app',
+    data: {
+        search: '',
+        message: '',
+        activeContact: 0,
+        myAvatar: "./assets/img/avatar_5.jpg",
+        contacts: [
+            {
+                name: 'Fabio',
+                avatar: './assets/img/avatar_4.jpg',
+                visible: false,
+                lastAccess: '15:30',
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'Yo bro you wanna play some Warzone?',
+                        status: 'received'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: "I might jump on later, really busy now",
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 16:15:22',
+                        text: "I'd want to but gotta learn VueJS. 🙃",
+                        status: 'sent'
+                    }
+                ],
+            },
+            {
+                name: 'Rudyn',
+                avatar: './assets/img/avatar_2.jpg',
+                visible: false,
+                lastAccess: '15:30',
+                messages: [
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'You on bro?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'No mate, Milly and Fraser are here',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:35:00',
+                        text: 'Zero problem brother',
+                        status: 'sent'
+                    }
+                ],
+            },
+
+            {
+                name: 'Anthony',
+                avatar: './assets/img/avatar_3.jpg',
+                visible: false,
+                lastAccess: '15:30',
+                messages: [
+                    {
+                        date: '28/03/2020 10:10:40',
+                        text: 'Wanna go with uncle bruno for a pint down the shore? 🎱🍻',
+                        status: 'received'
+                    },
+                    {
+                        date: '28/03/2020 10:20:10',
+                        text: 'Only if we get kebab for dinner!',
+                        status: 'sent'
+                    },
+                    {
+                        date: '28/03/2020 16:15:22',
+                        text: 'We have a deal',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Jordan',
+                avatar: './assets/img/avatar_7.jpg',
+                visible: false,
+                lastAccess: '15:30',
+                messages: [
+                    {
+                        date: '10/01/2020 15:30:55',
+                        text: 'What you having for dinner?',
+                        status: 'sent'
+                    },
+                    {
+                        date: '10/01/2020 15:50:00',
+                        text: 'Guess what?! KFC 😂',
+                        status: 'received'
+                    }
+                ],
+            },
+            {
+                name: 'Alessandro',
+                avatar: './assets/img/avatar_8.jpg',
+                lastAccess: '15:30',
+                visible: true,
+                messages: [
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text: 'Wanna come for dinner tonight?',
+                        status: 'received'
+                    },
+                    {
+                        date: '20/03/2020 16:30:55',
+                        text: 'What are you cooking? I ll bring the wine! 🍷',
+                        status: 'sent'
+                    },
+                    {
+                        date: '20/03/2020 16:35:00',
+                        text: 'Gonna make cavatelli ai frutti di maree',
+                        status: 'received'
+                    }
+                ],
+            },
+        ]
+
+    },
+    methods: {
+        // Shows the chat with the active contact
+        showChat(index) {
+            return this.activeContact = index
+        },
+        // Adds a new message
+        addMessage(activeContact) {
+            activeContact.messages.push({
+                date: '6:30:00',
+                text: this.message,
+                status: "sent"
+            })
+            return this.message = '', setTimeout(activeContact.messages.push({
+                date: '6:30:01',
+                text: "ok",
+                status: "received"
+            }), 1000)
+        },
+        deleteMessage(message) {
+            return message.text = ''
+        }
+    },
+
+
+})
+

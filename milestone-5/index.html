@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome CDN -->
+    <script src="https://kit.fontawesome.com/1d47f7a9f5.js" crossorigin="anonymous"></script>
+    <!-- Main CSS file -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Boolzapp</title>
+</head>
+
+<body>
+    <!-- Main div connected to Vue -->
+    <div id="app">
+        <!-- Background with shadow applied -->
+        <div class="background"></div>
+        <div class="screen_wrapper d_flex">
+            <section class="users">
+                <nav class="my_user d_flex">
+                    <div class="user_image d_flex">
+                        <img :src="myAvatar" alt="">
+                        <span>Nome Utente</span>
+                    </div>
+                    <div class="user_icons d_flex">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </nav>
+                <div class="notification d_flex">
+                    <i class="fas fa-bell-slash"></i>
+                    <div class="notification_link">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!-- Search contact bar -->
+                <div class="search_bar">
+                    <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat"
+                        v-model="search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <!-- Contact list -->
+                <div class="contact_list">
+                    <div v-for="(contact, index) in contacts" class="contact d_flex" @click="showChat(index)"
+                        v-if='contact.name.toLowerCase().includes(search)'>
+                        <img :src="contact.avatar" alt="">
+                        {{contact.name}}
+                    </div>
+                </div>
+            </section>
+            <section class="chat">
+                <div class="chat_user d_flex">
+                    <!-- Default chat shown -->
+                    <div class="avatar_and_access d_flex ">
+                        <img :src="contacts[activeContact].avatar" alt="">
+                        <div class=" last_access">
+                            <span>{{contacts[activeContact].name}}</span>
+                            <p class="access_time">Ultimo accesso oggi alle {{contacts[activeContact].lastAccess}}</p>
+                        </div>
+                    </div>
+                    <!-- Chat shown when clicking on a contact -->
+                    <div class="chat_icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+                <!-- Main chat section -->
+                <div class="chat_background d_flex">
+                    <div class="message" v-for="message in contacts[activeContact].messages" :class="message.status"
+                        v-if="message.text !== ''">
+                        {{message.text}}
+                        <small class="message_date">{{message.date}}</small>
+                        <i class="fas fa-chevron-down arrow"></i>
+                        <div class="message_info">
+                            <div>Message info</div>
+                            <div class='delete_message' @click="deleteMessage(message)">Delete message</div>
+                        </div>
+                    </div>
+                    <!-- Chat input -->
+                    <div class="chat_input d_flex">
+                        <i class="far fa-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio"
+                            @keyup.enter="addMessage(contacts[activeContact])" v-model="message">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+        </div>
+    </div>
+    <!-- Day JS -->
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
+    <!-- Vue JS-->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <!-- Main JS file -->
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
