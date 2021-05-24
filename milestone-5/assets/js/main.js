@@ -10,7 +10,7 @@ const app = new Vue({
                 name: 'Fabio',
                 avatar: './assets/img/avatar_4.jpg',
                 visible: false,
-                lastAccess: dayjs().format('hh:mm'),
+                lastAccess: dayjs('10/01/2020 15:30:55').format('YY/MM/DD HH:mm'),
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -33,7 +33,7 @@ const app = new Vue({
                 name: 'Rudyn',
                 avatar: './assets/img/avatar_2.jpg',
                 visible: false,
-                lastAccess: dayjs().format('hh:mm'),
+                lastAccess: dayjs('20/03/2020 16:30:55').format('YY/MM/DD HH:mm'),
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -57,7 +57,7 @@ const app = new Vue({
                 name: 'Anthony',
                 avatar: './assets/img/avatar_3.jpg',
                 visible: false,
-                lastAccess: dayjs().format('hh:mm'),
+                lastAccess: dayjs('28/03/2020 16:15:22').format('YY/MM/DD HH:mm'),
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -80,7 +80,7 @@ const app = new Vue({
                 name: 'Jordan',
                 avatar: './assets/img/avatar_7.jpg',
                 visible: false,
-                lastAccess: dayjs().format('hh:mm'),
+                lastAccess: dayjs('10/01/2020 15:50:00').format('YY/MM/DD HH:mm'),
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -97,7 +97,7 @@ const app = new Vue({
             {
                 name: 'Alessandro',
                 avatar: './assets/img/avatar_8.jpg',
-                lastAccess: dayjs().format('hh:mm'),
+                lastAccess: dayjs('20/03/2020 16:35:00').format('YY/MM/DD HH:mm'),
                 visible: true,
                 messages: [
                     {
