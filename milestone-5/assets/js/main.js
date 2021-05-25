@@ -10,7 +10,7 @@ const app = new Vue({
                 name: 'Fabio',
                 avatar: './assets/img/avatar_4.jpg',
                 visible: false,
-                lastAccess: dayjs('10/01/2020 16:15:22').format('MM/DD/YY HH:mm'),
+                lastAccess: dayjs('01/10/2020 16:15:22').format('DD/MM/YY HH:mm'),
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -80,7 +80,7 @@ const app = new Vue({
                 name: 'Jordan',
                 avatar: './assets/img/avatar_7.jpg',
                 visible: false,
-                lastAccess: dayjs('10/01/2020 15:50:00').format('MM/DD/YY HH:mm'),
+                lastAccess: dayjs('01/10/2020 15:50:00').format('DD/MM/YY HH:mm'),
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -138,7 +138,7 @@ const app = new Vue({
                     text: "ok",
                     status: "received"
                 }), 1000), activeContact.lastAccess = dayjs().format('HH:mm')
-            } A
+            }
         },
         deleteMessage(message) {
             return message.text = ''
