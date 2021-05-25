@@ -121,11 +121,18 @@ const app = new Vue({
 
     },
     methods: {
-        // Shows the chat with the active contact
+        /**
+         * Show the chat with the active contact
+         *  @param {String} index  - Needs the indext of the active contact
+         * @returns {String} - Changes the active contact with the index of the selected contact
+         */
         showChat(index) {
             return this.activeContact = index
         },
-        // Adds a new message
+        /**
+         * Adds the written message to the chat board with local time and updates the user's last access
+         *  @param {String} activeContact  - Needs the indext of the active contact
+         */
         addMessage(activeContact) {
             if (this.message !== '') {
                 activeContact.messages.push({
@@ -140,6 +147,11 @@ const app = new Vue({
                 }), 1000), activeContact.lastAccess = dayjs().format('HH:mm')
             }
         },
+        /** 
+         * Deletes a message when clicked
+         * @param {string} message - Takes the selected message and removes it
+         * @returns {string} - Returns an empty string
+        */
         deleteMessage(message) {
             return message.text = ''
         }
